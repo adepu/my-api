@@ -4,5 +4,5 @@ import com.metr.api.models.Customer;
 
 public interface CustomerService {
 
-    Customer getCustomerById(Integer id);
+    Customer getCustomerById(Long id);
 }

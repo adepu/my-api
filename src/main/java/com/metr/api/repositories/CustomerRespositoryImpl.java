@@ -2,14 +2,17 @@ package com.metr.api.repositories;
 
 import com.metr.api.models.Customer;
 import org.joda.time.DateTime;
+import org.joda.time.LocalDate;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 
 @Repository
 public class CustomerRespositoryImpl implements CustomerRepository {
 
     @Override
-    public Customer getCustomerById(Integer id) {
+    public Customer getCustomerById(Long id) {
         return getCustomer();
     }
 
@@ -30,5 +33,25 @@ public class CustomerRespositoryImpl implements CustomerRepository {
         customer.setLastLogin(currentTime);
 
         return customer;
+    }
+
+    @Override
+    public List<Customer> getAllCustomers() {
+        return null;
+    }
+
+    @Override
+    public void updateCustomer(Customer customer) {
+
+    }
+
+    @Override
+    public void createCustomer(Customer customer) {
+
+    }
+
+    @Override
+    public void deactivateCustomer(Long customerId) {
+
     }
 }
