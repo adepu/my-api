@@ -17,6 +17,8 @@ public class Location {
     private Customer owner;
     private List<Rating> ratings;
     private LocalDate lastBooked;
+    private Double latitude;
+    private Double longitude;
 
     public Long getLocationId() {
         return locationId;
@@ -114,21 +116,39 @@ public class Location {
         this.lastBooked = lastBooked;
     }
 
+    public Double getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(Double latitude) {
+        this.latitude = latitude;
+    }
+
+    public Double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(Double longitude) {
+        this.longitude = longitude;
+    }
+
     @Override
     public String toString() {
         return "Location{" +
                 "locationId=" + locationId +
-                ", title='" + title +
-                ", description='" + description +
-                ", address1='" + address1 +
-                ", address2='" + address2 +
-                ", city='" + city +
-                ", state='" + state +
-                ", zip='" + zip +
+                ", title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                ", address1='" + address1 + '\'' +
+                ", address2='" + address2 + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", zip='" + zip + '\'' +
                 ", images=" + images +
                 ", owner=" + owner +
                 ", ratings=" + ratings +
                 ", lastBooked=" + lastBooked +
+                ", latitude=" + latitude +
+                ", longitude=" + longitude +
                 '}';
     }
 }

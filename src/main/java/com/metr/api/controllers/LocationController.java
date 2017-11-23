@@ -24,7 +24,8 @@ public class LocationController {
 
     @RequestMapping(value = "/locations", method = RequestMethod.GET)
     public List<Location> getAllLocations(){
-        return null;
+
+        return locationService.getAllLocations();
     }
 
     public List<Location> getNearestAvailableLocations(Location location){
