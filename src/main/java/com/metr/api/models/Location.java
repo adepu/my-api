@@ -14,7 +14,7 @@ public class Location {
     private String state;
     private String zip;
     private List<String> images;
-    private Customer owner;
+    private Long ownerId;
     private List<Rating> ratings;
     private LocalDate lastBooked;
     private Double latitude;
@@ -92,13 +92,9 @@ public class Location {
         this.images = images;
     }
 
-    public Customer getOwner() {
-        return owner;
-    }
+    public Long getOwnerId() { return ownerId; }
 
-    public void setOwner(Customer owner) {
-        this.owner = owner;
-    }
+    public void setOwnerId(Long ownerId) { this.ownerId = ownerId; }
 
     public List<Rating> getRatings() {
         return ratings;
@@ -116,21 +112,13 @@ public class Location {
         this.lastBooked = lastBooked;
     }
 
-    public Double getLatitude() {
-        return latitude;
-    }
+    public Double getLatitude() { return latitude; }
 
-    public void setLatitude(Double latitude) {
-        this.latitude = latitude;
-    }
+    public void setLatitude(Double latitude) { this.latitude = latitude; }
 
-    public Double getLongitude() {
-        return longitude;
-    }
+    public Double getLongitude() { return longitude; }
 
-    public void setLongitude(Double longitude) {
-        this.longitude = longitude;
-    }
+    public void setLongitude(Double longitude) { this.longitude = longitude; }
 
     @Override
     public String toString() {
@@ -144,7 +132,7 @@ public class Location {
                 ", state='" + state + '\'' +
                 ", zip='" + zip + '\'' +
                 ", images=" + images +
-                ", owner=" + owner +
+                ", ownerId=" + ownerId +
                 ", ratings=" + ratings +
                 ", lastBooked=" + lastBooked +
                 ", latitude=" + latitude +
