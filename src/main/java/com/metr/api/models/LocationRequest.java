@@ -1,12 +1,21 @@
 package com.metr.api.models;
 
-import java.time.LocalDate;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.metr.api.configuration.CustomDateDeserializer;
+import com.metr.api.configuration.CustomDateSerializer;
+import org.joda.time.LocalDate;
+
 
 public class LocationRequest {
 
     private Double latitude;
     private Double longitude;
+    @JsonSerialize(using = CustomDateSerializer.class)
+    @JsonDeserialize(using = CustomDateDeserializer.class)
     private LocalDate reservationStartDate;
+    @JsonSerialize(using = CustomDateSerializer.class)
+    @JsonDeserialize(using = CustomDateDeserializer.class)
     private LocalDate reservationEndDate;
     private Double radius;
 
