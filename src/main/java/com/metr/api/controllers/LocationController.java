@@ -20,6 +20,7 @@ public class LocationController {
         return locationService.getLocationDetailsById(locationId);
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @RequestMapping(value = "/locations", method = RequestMethod.GET)
     public List<Location> getAllLocations(){
 
