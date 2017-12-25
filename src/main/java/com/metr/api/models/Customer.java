@@ -17,6 +17,8 @@ public class Customer {
     private String email;
     private DateTime dateCreated;
     private DateTime lastLogin;
+    private DateTime lastUpdated;
+    private Long customerId;
 
     public String getFirstName() {
         return firstName;
@@ -122,22 +124,48 @@ public class Customer {
         this.lastLogin = lastLogin;
     }
 
+    public Long getCustomerId() {
+        return customerId;
+    }
+
+    public void setCustomerId(Long customerId) {
+        this.customerId = customerId;
+    }
+
+    public Boolean getRenter() {
+        return renter;
+    }
+
+    public Boolean getRentee() {
+        return rentee;
+    }
+
+    public DateTime getLastUpdated() {
+        return lastUpdated;
+    }
+
+    public void setLastUpdated(DateTime lastUpdated) {
+        this.lastUpdated = lastUpdated;
+    }
+
     @Override
     public String toString() {
         return "Customer{" +
-                "firstName='" + firstName +
-                ", lastName='" + lastName +
-                ", address1='" + address1 +
-                ", address2='" + address2 +
-                ", city='" + city +
-                ", state='" + state +
-                ", zip='" + zip +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", address1='" + address1 + '\'' +
+                ", address2='" + address2 + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", zip='" + zip + '\'' +
                 ", renter=" + renter +
                 ", rentee=" + rentee +
-                ", phoneNumber='" + phoneNumber +
-                ", email='" + email +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", email='" + email + '\'' +
                 ", dateCreated=" + dateCreated +
                 ", lastLogin=" + lastLogin +
+                ", lastUpdated=" + lastUpdated +
+                ", customerId=" + customerId +
                 '}';
     }
 }

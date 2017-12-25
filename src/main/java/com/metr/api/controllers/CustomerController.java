@@ -15,12 +15,13 @@ public class CustomerController {
 
     @RequestMapping(value = "/customer/{id}", method = RequestMethod.GET)
     public Customer getCustomerById(@PathVariable  Long id){
+
         return customerService.getCustomerById(id);
     }
 
     @RequestMapping(value = "/customers", method = RequestMethod.GET)
     public List<Customer> getAllCustomers(){
-        return null;
+        return customerService.getAllCustomers();
     }
 
     @RequestMapping(value = "/customer/{id}", method = RequestMethod.POST)
